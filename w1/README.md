@@ -38,7 +38,7 @@ each line)? What are these files?
 -> The files here are of the type c
 
 
-    – : regular file
+    -:  regular file
     d : directory
     c : character device file
     b : block device file
