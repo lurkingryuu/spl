@@ -46,5 +46,14 @@
 - `-L.` where the `-L` flag advises the linker to add `.` to the library path.
 - We can avoid `-L` flag by adding `libstaqueheap.a` in `/usr/lib or /usr/local/lib or /usr/lib/x86_64-linux-gnu/`
 	
+#### Dynamic/Shared Library
 
-
+- Compile individual source files with the -c option.
+- To generate position-independent codes, use `-fPIC` flag.
+- `gcc -Wall -fPIC -c stack.c`
+- `gcc -Wall -fPIC -c queue.c`
+- `gcc -Wall -fPIC -c heap.c`
+- Combine the objects into the shared libraru using `gcc -shared`
+- `gcc -shared -o libstaqueheap.so stack.o queue.o heap.o`
+- `gcc -Wall -L. stackqueheap.c -lstaqueheap" to compile and run.
+- `export LD_LIBRARY_PATH=/usr/bin/lib` should be added to the bashrc so as to run the output file.
